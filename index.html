@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barista Sri Lanka | Brewing Happiness Across the Island</title>
+  <meta
+    name="description"
+    content="For twenty-three years, Barista has been where Sri Lanka meets, works, talks, and reconnects. Eighty-seven cafes. One island."
+  >
+  <link rel="icon" href="assets/img/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Plus+Jakarta+Sans:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body class="page page--home">
+  <site-header data-page="home"></site-header>
+
+  <main>
+    <section class="hm-hero" aria-labelledby="home-hero-title">
+      <video
+        class="hm-hero__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="assets/img/barista-video-poster-1.jpg"
+        aria-hidden="true"
+      >
+        <source src="assets/video/barista-intro-video-1.mp4" type="video/mp4">
+      </video>
+      <div class="hm-hero__vignette" aria-hidden="true"></div>
+
+      <div class="hm-hero__meta">
+        <p class="hm-meta-label">EST. 2003 -- COLOMBO</p>
+        <p class="hm-meta-label" id="home-hero-clock" aria-live="polite">COLOMBO / 00:00</p>
+      </div>
+
+      <div class="hm-hero__body">
+        <h1 class="hm-display hm-display--hero" id="home-hero-title" data-settle>
+          <span class="hm-settle__line"><span>Brewing happiness, eighty-seven cafes strong.</span></span>
+        </h1>
+      </div>
+
+      <button
+        class="hm-hero__film"
+        type="button"
+        data-open-dialog="brand-film"
+        aria-controls="brand-film"
+      >
+        <span class="hm-hero__film-icon" aria-hidden="true">&#8635;</span>
+        Watch the film
+      </button>
+
+      <div class="hm-scroll-cue" aria-hidden="true">
+        <span class="hm-scroll-cue__line"></span>
+        <span class="hm-scroll-cue__label">scroll</span>
+      </div>
+    </section>
+
+    <section class="hm-opening" aria-labelledby="home-opening-title">
+      <svg class="hm-opening__grain" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <filter id="hm-opening-grain">
+          <feTurbulence type="fractalNoise" baseFrequency="1.25" numOctaves="2" stitchTiles="stitch" />
+          <feColorMatrix type="saturate" values="0" />
+          <feComponentTransfer>
+            <feFuncA type="table" tableValues="0 0.22" />
+          </feComponentTransfer>
+        </filter>
+        <rect width="100%" height="100%" filter="url(#hm-opening-grain)"></rect>
+      </svg>
+
+      <span class="hm-chapter-mark" aria-hidden="true">CH. 01 / THE PLACE</span>
+
+      <div class="hm-opening__inner">
+        <blockquote class="hm-opening__quote" id="home-opening-title" data-settle>
+          <span class="hm-settle__line">
+            <span>For twenty-three years, we've been the place Sri Lanka meets, works, talks, and reconnects.</span>
+          </span>
+          <span class="hm-settle__line">
+            <span>Today -- eighty-seven cafes strong, still pouring the same warmth.</span>
+          </span>
+        </blockquote>
+        <p class="hm-opening__note">-- A note from Barista.</p>
+        <aside class="hm-opening__awards" aria-label="Recognition at the National Business Excellence Awards 2025">
+          <p class="hm-opening__awards-eyebrow">RECOGNIZED &#8212; 2025 NATIONAL BUSINESS EXCELLENCE AWARDS</p>
+          <ul class="hm-opening__awards-list">
+            <li>Winner &#8212; Medium Level Category</li>
+            <li>Excellence in Business and Financial Performance &#8212; Medium Category</li>
+            <li>Hospitality &amp; Tourism Sector</li>
+            <li>Bronze &#8212; Glocal Brand of the Year</li>
+            <li>Merit &#8212; Agile Brand of the Year</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="hm-trophies" aria-labelledby="home-trophies-title">
+      <div class="hm-trophies__watermark" aria-hidden="true">BARISTA</div>
+      <div class="container-wide hm-trophies__stage">
+        <h2 class="hm-sr-only" id="home-trophies-title">Barista by the numbers</h2>
+
+        <article class="hm-monument hm-monument--northwest">
+          <p class="hm-monument__number" data-home-count="87" aria-label="87 cafes">0</p>
+          <p class="hm-monument__caption">cafes. one island.</p>
+        </article>
+
+        <article class="hm-monument hm-monument--east">
+          <p class="hm-monument__number" data-home-count="23" aria-label="23 years">0</p>
+          <p class="hm-monument__caption">years pouring.</p>
+        </article>
+
+        <article class="hm-monument hm-monument--southwest">
+          <p
+            class="hm-monument__number"
+            data-home-count="116732"
+            data-home-count-key="crown"
+            aria-label="116,732 Crown Bearers"
+          >
+            0
+          </p>
+          <p class="hm-monument__caption">Crown Bearers, and climbing.</p>
+          <p class="hm-monument__ticker">
+            <span class="hm-monument__ticker-dot" aria-hidden="true"></span>
+            + <span data-home-today-count>142</span> today
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="hm-pillars" aria-labelledby="home-pillars-title">
+      <div class="container-wide hm-pillars__inner">
+        <div class="hm-pillars__intro">
+          <p class="hm-eyebrow">CH. 02 / WHAT MAKES US</p>
+          <h2 class="hm-display hm-display--section" id="home-pillars-title" data-settle>
+            <span class="hm-settle__line"><span>Know us a little better.</span></span>
+          </h2>
+          <p class="hm-pillars__lead">
+            For over 23 years, Barista has been at the heart of Sri Lanka's caf&#233; culture &#8212; known for its branded
+            customer service and promise of delivering a world-class caf&#233; experience.
+          </p>
+        </div>
+
+        <ol class="hm-pillars__grid">
+          <li class="hm-pillar">
+            <span class="hm-pillar__number" aria-hidden="true">01</span>
+            <img
+              class="hm-pillar__icon"
+              src="assets/img/Layer-3-png-1-1.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <h3 class="hm-pillar__title">Island-wide outlet coverage</h3>
+            <p class="hm-pillar__body">
+              We've got you covered with many outlets scattered island-wide, guaranteeing that you will always find us
+              nearby whenever you're craving a perfect cup of coffee.
+            </p>
+          </li>
+          <li class="hm-pillar">
+            <span class="hm-pillar__number" aria-hidden="true">02</span>
+            <img
+              class="hm-pillar__icon"
+              src="assets/img/barista-1-1-1-1.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <h3 class="hm-pillar__title">Highly skilled professional baristas</h3>
+            <p class="hm-pillar__body">
+              We have highly skilled, VTA, and NVQ-certified professional baristas, ensuring that every visit to
+              Barista is not just about the coffee but also about the unique connection and delight that comes with it.
+            </p>
+          </li>
+          <li class="hm-pillar">
+            <span class="hm-pillar__number" aria-hidden="true">03</span>
+            <img
+              class="hm-pillar__icon"
+              src="assets/img/tea2-1-1-01.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <h3 class="hm-pillar__title">Barista branded customer service</h3>
+            <p class="hm-pillar__body">
+              Our commitment is to deliver exceptional customer service and a coffee experience that stands out from the
+              rest. We strive to create a memorable experience with every sip.
+            </p>
+          </li>
+          <li class="hm-pillar">
+            <span class="hm-pillar__number" aria-hidden="true">04</span>
+            <img
+              class="hm-pillar__icon"
+              src="assets/img/technology-1-1-1.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <h3 class="hm-pillar__title">Deploying new trends and technology</h3>
+            <p class="hm-pillar__body">
+              We have implemented innovative technologies including the Mobile app, E-shop, Coffee Drive-thru, and
+              store-within-stores to ensure a smooth and convenient experience for our customers.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="hm-island" aria-labelledby="home-island-title">
+      <div class="container-wide hm-island__shell">
+        <div class="hm-island__lead">
+          <p class="hm-eyebrow">CH. 02 / THE ISLAND</p>
+          <h2 class="hm-display hm-display--section hm-island__title" id="home-island-title" data-settle>
+            <span class="hm-settle__line"><span>Wherever you are on the island,</span></span>
+            <span class="hm-settle__line"><span>we're already there.</span></span>
+          </h2>
+        </div>
+
+        <div class="hm-island__layout" data-home-map>
+          <figure class="hm-island-map">
+            <div class="hm-island-map__canvas">
+              <img
+                class="hm-island-map__img"
+                src="assets/img/barista-locations-map-2-768x1024.jpg"
+                alt="Map of Sri Lanka with Barista caf&#233; locations marked across the island"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+          </figure>
+
+          <div class="hm-island-directory">
+            <ul class="hm-island-directory__list">
+              <li><a href="find-a-cafe.html?district=Colombo" data-map-district="Colombo">Colombo <span>46</span></a></li>
+              <li><a href="find-a-cafe.html?district=Gampaha" data-map-district="Gampaha">Gampaha <span>13</span></a></li>
+              <li><a href="find-a-cafe.html?district=Kalutara" data-map-district="Kalutara">Kalutara <span>4</span></a></li>
+              <li><a href="find-a-cafe.html?district=Galle" data-map-district="Galle">Galle <span>4</span></a></li>
+              <li><a href="find-a-cafe.html?district=Kandy" data-map-district="Kandy">Kandy <span>3</span></a></li>
+              <li><a href="find-a-cafe.html?district=Kurunegala" data-map-district="Kurunegala">Kurunegala <span>2</span></a></li>
+              <li><a href="find-a-cafe.html?district=Nuwara%20Eliya" data-map-district="Nuwara Eliya">Nuwara Eliya <span>2</span></a></li>
+              <li><a href="find-a-cafe.html?district=Matara" data-map-district="Matara">Matara <span>2</span></a></li>
+              <li><a href="find-a-cafe.html?district=Badulla" data-map-district="Badulla">Badulla <span>2</span></a></li>
+              <li><a href="find-a-cafe.html?district=Jaffna" data-map-district="Jaffna">Jaffna <span>1</span></a></li>
+              <li><a href="find-a-cafe.html?district=Anuradhapura" data-map-district="Anuradhapura">Anuradhapura <span>1</span></a></li>
+              <li><a href="find-a-cafe.html?district=Polonnaruwa" data-map-district="Polonnaruwa">Polonnaruwa <span>1</span></a></li>
+              <li><a href="find-a-cafe.html?district=Puttalam" data-map-district="Puttalam">Puttalam <span>1</span></a></li>
+              <li><a href="find-a-cafe.html?district=Ratnapura" data-map-district="Ratnapura">Ratnapura <span>1</span></a></li>
+              <li><a href="find-a-cafe.html?district=Hambantota" data-map-district="Hambantota">Hambantota <span>1</span></a></li>
+              <li><a href="find-a-cafe.html?district=Matale" data-map-district="Matale">Matale <span>1</span></a></li>
+            </ul>
+
+            <a class="hm-button hm-button--primary" href="find-a-cafe.html">Find your nearest cafe</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hm-day" aria-labelledby="home-day-title">
+      <div class="container-wide hm-day__intro">
+        <p class="hm-eyebrow hm-eyebrow--light">CH. 03 / RITUAL</p>
+        <h2 class="hm-display hm-display--section hm-day__title" id="home-day-title" data-settle>
+          <span class="hm-settle__line"><span>A day, in eighty-seven places.</span></span>
+        </h2>
+      </div>
+
+      <div class="hm-day__rail" role="list" aria-label="A day across Barista cafes">
+        <div class="hm-day__track" data-day-track>
+          <button
+            type="button"
+            class="hm-moment"
+            role="listitem"
+            data-moment-open
+            data-moment-image="assets/img/Dehiwala1.jpg"
+            data-moment-alt="Morning light inside Barista Dehiwala"
+            data-moment-time="06:42 / DEHIWALA"
+            data-moment-line="First pour, the city wakes up."
+          >
+            <span class="hm-moment__media hm-unmask" data-reveal>
+              <img src="assets/img/Dehiwala1.jpg" alt="Morning light inside Barista Dehiwala" loading="lazy" decoding="async">
+            </span>
+            <span class="hm-moment__copy">
+              <span class="hm-moment__eyebrow">06:42 / DEHIWALA</span>
+              <span class="hm-moment__line">First pour, the city wakes up.</span>
+            </span>
+          </button>
+
+          <button
+            type="button"
+            class="hm-moment"
+            role="listitem"
+            data-moment-open
+            data-moment-image="assets/img/nugegoda1.jpg"
+            data-moment-alt="Guests gathering at Barista Nugegoda in the morning"
+            data-moment-time="10:15 / NUGEGODA"
+            data-moment-line="The morning meeting begins."
+          >
+            <span class="hm-moment__media hm-unmask" data-reveal>
+              <img src="assets/img/nugegoda1.jpg" alt="Guests gathering at Barista Nugegoda in the morning" loading="lazy" decoding="async">
+            </span>
+            <span class="hm-moment__copy">
+              <span class="hm-moment__eyebrow">10:15 / NUGEGODA</span>
+              <span class="hm-moment__line">The morning meeting begins.</span>
+            </span>
+          </button>
+
+          <button
+            type="button"
+            class="hm-moment"
+            role="listitem"
+            data-moment-open
+            data-moment-image="assets/img/maharagama-dinner-1.jpg"
+            data-moment-alt="Lunch service at Barista Maharagama Diner"
+            data-moment-time="13:08 / MAHARAGAMA"
+            data-moment-line="Lunch at the diner."
+          >
+            <span class="hm-moment__media hm-unmask" data-reveal>
+              <img src="assets/img/maharagama-dinner-1.jpg" alt="Lunch service at Barista Maharagama Diner" loading="lazy" decoding="async">
+            </span>
+            <span class="hm-moment__copy">
+              <span class="hm-moment__eyebrow">13:08 / MAHARAGAMA</span>
+              <span class="hm-moment__line">Lunch at the diner.</span>
+            </span>
+          </button>
+
+          <button
+            type="button"
+            class="hm-moment"
+            role="listitem"
+            data-moment-open
+            data-moment-image="assets/img/kandy1.jpg"
+            data-moment-alt="A relaxed afternoon at Barista Kandy"
+            data-moment-time="15:47 / KANDY"
+            data-moment-line="A hill-country pause."
+          >
+            <span class="hm-moment__media hm-unmask" data-reveal>
+              <img src="assets/img/kandy1.jpg" alt="A relaxed afternoon at Barista Kandy" loading="lazy" decoding="async">
+            </span>
+            <span class="hm-moment__copy">
+              <span class="hm-moment__eyebrow">15:47 / KANDY</span>
+              <span class="hm-moment__line">A hill-country pause.</span>
+            </span>
+          </button>
+
+          <button
+            type="button"
+            class="hm-moment"
+            role="listitem"
+            data-moment-open
+            data-moment-image="assets/img/pallekale1.jpg"
+            data-moment-alt="Golden-hour scene at Barista Pallekale"
+            data-moment-time="18:22 / PALLEKALE"
+            data-moment-line="Golden-hour catch-ups."
+          >
+            <span class="hm-moment__media hm-unmask" data-reveal>
+              <img src="assets/img/pallekale1.jpg" alt="Golden-hour scene at Barista Pallekale" loading="lazy" decoding="async">
+            </span>
+            <span class="hm-moment__copy">
+              <span class="hm-moment__eyebrow">18:22 / PALLEKALE</span>
+              <span class="hm-moment__line">Golden-hour catch-ups.</span>
+            </span>
+          </button>
+
+          <button
+            type="button"
+            class="hm-moment"
+            role="listitem"
+            data-moment-open
+            data-moment-image="assets/img/athurugiriya1.jpg"
+            data-moment-alt="Evening warmth at Barista Athurugiriya"
+            data-moment-time="21:30 / ATHURUGIRIYA"
+            data-moment-line="Last orders, warm windows."
+          >
+            <span class="hm-moment__media hm-unmask" data-reveal>
+              <img src="assets/img/athurugiriya1.jpg" alt="Evening warmth at Barista Athurugiriya" loading="lazy" decoding="async">
+            </span>
+            <span class="hm-moment__copy">
+              <span class="hm-moment__eyebrow">21:30 / ATHURUGIRIYA</span>
+              <span class="hm-moment__line">Last orders, warm windows.</span>
+            </span>
+          </button>
+
+          <button
+            type="button"
+            class="hm-moment"
+            role="listitem"
+            aria-hidden="true"
+            tabindex="-1"
+            data-moment-open
+            data-moment-image="assets/img/Dehiwala1.jpg"
+            data-moment-alt="Morning light inside Barista Dehiwala"
+            data-moment-time="06:42 / DEHIWALA"
+            data-moment-line="First pour, the city wakes up."
+          >
+            <span class="hm-moment__media hm-unmask" data-reveal>
+              <img src="assets/img/Dehiwala1.jpg" alt="Morning light inside Barista Dehiwala" loading="lazy" decoding="async">
+            </span>
+            <span class="hm-moment__copy">
+              <span class="hm-moment__eyebrow">06:42 / DEHIWALA</span>
+              <span class="hm-moment__line">First pour, the city wakes up.</span>
+            </span>
+          </button>
+
+          <button
+            type="button"
+            class="hm-moment"
+            role="listitem"
+            aria-hidden="true"
+            tabindex="-1"
+            data-moment-open
+            data-moment-image="assets/img/nugegoda1.jpg"
+            data-moment-alt="Guests gathering at Barista Nugegoda in the morning"
+            data-moment-time="10:15 / NUGEGODA"
+            data-moment-line="The morning meeting begins."
+          >
+            <span class="hm-moment__media hm-unmask" data-reveal>
+              <img src="assets/img/nugegoda1.jpg" alt="Guests gathering at Barista Nugegoda in the morning" loading="lazy" decoding="async">
+            </span>
+            <span class="hm-moment__copy">
+              <span class="hm-moment__eyebrow">10:15 / NUGEGODA</span>
+              <span class="hm-moment__line">The morning meeting begins.</span>
+            </span>
+          </button>
+
+          <button
+            type="button"
+            class="hm-moment"
+            role="listitem"
+            aria-hidden="true"
+            tabindex="-1"
+            data-moment-open
+            data-moment-image="assets/img/maharagama-dinner-1.jpg"
+            data-moment-alt="Lunch service at Barista Maharagama Diner"
+            data-moment-time="13:08 / MAHARAGAMA"
+            data-moment-line="Lunch at the diner."
+          >
+            <span class="hm-moment__media hm-unmask" data-reveal>
+              <img src="assets/img/maharagama-dinner-1.jpg" alt="Lunch service at Barista Maharagama Diner" loading="lazy" decoding="async">
+            </span>
+            <span class="hm-moment__copy">
+              <span class="hm-moment__eyebrow">13:08 / MAHARAGAMA</span>
+              <span class="hm-moment__line">Lunch at the diner.</span>
+            </span>
+          </button>
+
+          <button
+            type="button"
+            class="hm-moment"
+            role="listitem"
+            aria-hidden="true"
+            tabindex="-1"
+            data-moment-open
+            data-moment-image="assets/img/kandy1.jpg"
+            data-moment-alt="A relaxed afternoon at Barista Kandy"
+            data-moment-time="15:47 / KANDY"
+            data-moment-line="A hill-country pause."
+          >
+            <span class="hm-moment__media hm-unmask" data-reveal>
+              <img src="assets/img/kandy1.jpg" alt="A relaxed afternoon at Barista Kandy" loading="lazy" decoding="async">
+            </span>
+            <span class="hm-moment__copy">
+              <span class="hm-moment__eyebrow">15:47 / KANDY</span>
+              <span class="hm-moment__line">A hill-country pause.</span>
+            </span>
+          </button>
+
+          <button
+            type="button"
+            class="hm-moment"
+            role="listitem"
+            aria-hidden="true"
+            tabindex="-1"
+            data-moment-open
+            data-moment-image="assets/img/pallekale1.jpg"
+            data-moment-alt="Golden-hour scene at Barista Pallekale"
+            data-moment-time="18:22 / PALLEKALE"
+            data-moment-line="Golden-hour catch-ups."
+          >
+            <span class="hm-moment__media hm-unmask" data-reveal>
+              <img src="assets/img/pallekale1.jpg" alt="Golden-hour scene at Barista Pallekale" loading="lazy" decoding="async">
+            </span>
+            <span class="hm-moment__copy">
+              <span class="hm-moment__eyebrow">18:22 / PALLEKALE</span>
+              <span class="hm-moment__line">Golden-hour catch-ups.</span>
+            </span>
+          </button>
+
+          <button
+            type="button"
+            class="hm-moment"
+            role="listitem"
+            aria-hidden="true"
+            tabindex="-1"
+            data-moment-open
+            data-moment-image="assets/img/athurugiriya1.jpg"
+            data-moment-alt="Evening warmth at Barista Athurugiriya"
+            data-moment-time="21:30 / ATHURUGIRIYA"
+            data-moment-line="Last orders, warm windows."
+          >
+            <span class="hm-moment__media hm-unmask" data-reveal>
+              <img src="assets/img/athurugiriya1.jpg" alt="Evening warmth at Barista Athurugiriya" loading="lazy" decoding="async">
+            </span>
+            <span class="hm-moment__copy">
+              <span class="hm-moment__eyebrow">21:30 / ATHURUGIRIYA</span>
+              <span class="hm-moment__line">Last orders, warm windows.</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="hm-marquee" aria-hidden="true">
+      <div class="hm-marquee__track">
+        <span>BREWING HAPPINESS &middot; EIGHTY-SEVEN CAFES &middot; ACROSS THE ISLAND &middot; SINCE 2003 &middot;</span>
+        <span>BREWING HAPPINESS &middot; EIGHTY-SEVEN CAFES &middot; ACROSS THE ISLAND &middot; SINCE 2003 &middot;</span>
+      </div>
+    </div>
+
+    <section class="hm-crown" aria-labelledby="home-crown-title">
+      <div class="container-wide hm-crown__layout">
+        <div class="hm-crown__copy">
+          <p class="hm-eyebrow hm-eyebrow--light">CH. 04 / THE CROWN</p>
+          <h2 class="hm-display hm-display--section hm-crown__title" id="home-crown-title" data-settle>
+            <span class="hm-settle__line"><span>Your whole birthday month, on us.</span></span>
+          </h2>
+          <p class="hm-crown__body">
+            Crown turns every visit into points, every point into perks, and every birthday into a month-long thank-you:
+            25% off coffee on your birthday, plus 15% off the entire month.
+          </p>
+          <p class="hm-crown__stat">
+            <strong data-home-count-mirror="crown">116,732</strong> Crown Bearers and counting.
+          </p>
+          <div class="hm-crown__actions">
+            <a class="hm-button hm-button--primary" href="contact.html#crown">Become a Crown Bearer</a>
+            <a class="hm-button hm-button--ghost" href="contact.html#crown-sign-in">Sign in</a>
+          </div>
+        </div>
+
+        <div class="hm-crown__visual">
+          <div class="hm-crown-card" data-home-card aria-label="Barista Crown loyalty card">
+            <div class="hm-crown-card__shine" data-home-card-shine aria-hidden="true"></div>
+            <div class="hm-crown-card__brand">
+              <img src="assets/img/logo-3-2.png" alt="Barista Sri Lanka" loading="lazy" decoding="async">
+            </div>
+            <div class="hm-crown-card__center">BARISTA CROWN</div>
+            <div class="hm-crown-card__footer">
+              <span class="hm-crown-card__member">M. PERERA</span>
+              <svg class="hm-crown-card__icon" viewBox="0 0 32 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M2 20 L8 6 L16 14 L24 2 L30 20 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+                <path d="M0 22 H32" fill="none" stroke="currentColor" stroke-width="2"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hm-franchise" aria-labelledby="home-franchise-title">
+      <div class="container-wide hm-franchise__layout">
+        <div class="hm-franchise__copy">
+          <p class="hm-eyebrow">CH. 06 / GROW WITH US</p>
+          <h2 class="hm-display hm-display--section" id="home-franchise-title" data-settle>
+            <span class="hm-settle__line"><span>Success is best</span></span>
+            <span class="hm-settle__line"><span><em>when shared.</em></span></span>
+          </h2>
+          <p class="hm-franchise__body">
+            Discover exciting opportunities and learn how to become a Barista franchisee &#8212; and be a part of our
+            growth journey.
+          </p>
+          <a class="hm-button hm-button--primary" href="franchising.html">Learn more</a>
+        </div>
+
+        <ul class="hm-franchise__pillars">
+          <li class="hm-franchise-card">
+            <span class="hm-franchise-card__mark" aria-hidden="true">+</span>
+            <h3 class="hm-franchise-card__title">Brand lineage</h3>
+            <p class="hm-franchise-card__body">Enhanced brand visibility and widespread accessibility.</p>
+          </li>
+          <li class="hm-franchise-card">
+            <span class="hm-franchise-card__mark" aria-hidden="true">+</span>
+            <h3 class="hm-franchise-card__title">Scalability</h3>
+            <p class="hm-franchise-card__body">Opportunities for multi-location growth.</p>
+          </li>
+          <li class="hm-franchise-card">
+            <span class="hm-franchise-card__mark" aria-hidden="true">+</span>
+            <h3 class="hm-franchise-card__title">Ease of operations</h3>
+            <p class="hm-franchise-card__body">A time-tested and efficient operational framework.</p>
+          </li>
+          <li class="hm-franchise-card">
+            <span class="hm-franchise-card__mark" aria-hidden="true">+</span>
+            <h3 class="hm-franchise-card__title">Best investment opportunity</h3>
+            <p class="hm-franchise-card__body">Food industry growth projected at a CAGR of 20&#8211;25%.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="hm-gift" aria-labelledby="home-gift-title">
+      <div class="container-wide hm-gift__shell">
+        <div class="hm-gift__copy">
+          <p class="hm-eyebrow hm-eyebrow--light">CH. 07 / GIVE A LITTLE WARMTH</p>
+          <h2 class="hm-display hm-display--section" id="home-gift-title" data-settle>
+            <span class="hm-settle__line"><span>Send a Barista,</span></span>
+            <span class="hm-settle__line"><span><em>in an envelope.</em></span></span>
+          </h2>
+          <p class="hm-gift__body">
+            Digital gift cards, redeemable across all 87 caf&#233;s. The simplest way to send someone a slow morning,
+            a long catch-up, or a quiet hour to themselves.
+          </p>
+          <a class="hm-button hm-button--primary" href="https://www.baristagifts.lk" target="_blank" rel="noopener">
+            Send an e-Gift &rarr;
+          </a>
+        </div>
+
+        <figure class="hm-gift__art">
+          <img src="assets/img/e-Gift.png" alt="Barista e-Gift card" loading="lazy" decoding="async">
+        </figure>
+      </div>
+    </section>
+
+    <section class="hm-journal" aria-labelledby="home-journal-title">
+      <div class="container-wide">
+        <div class="hm-journal__intro">
+          <p class="hm-eyebrow">CH. 05 / IN MOTION</p>
+          <h2 class="hm-display hm-display--section hm-journal__title" id="home-journal-title" data-settle>
+            <span class="hm-settle__line"><span>Lately, in the cafes.</span></span>
+          </h2>
+        </div>
+
+        <div class="hm-journal__grid">
+          <article class="hm-journal__lead">
+            <div class="hm-journal__lead-media hm-unmask" data-reveal>
+              <img
+                src="assets/img/natioanl-business-excellenceawards.jpg"
+                alt="Barista receiving honors at the National Business Excellence Awards 2025"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="hm-journal__lead-copy">
+              <time class="hm-journal__date" datetime="2025-11-15">NOV 15 / 2025</time>
+              <h3>Triple honors at the National Business Excellence Awards 2025.</h3>
+              <p>
+                A benchmark season for the brand: stronger national recognition, sharper operating confidence, and a
+                clearer signal that Barista continues to lead Sri Lanka's cafe conversation at scale.
+              </p>
+              <a class="hm-journal__link" href="news.html">Read story -&gt;</a>
+            </div>
+          </article>
+
+          <div class="hm-journal__stack">
+            <article class="hm-journal__item hm-journal__item--image-led">
+              <div class="hm-journal__item-media hm-unmask" data-reveal>
+                <img
+                  src="assets/img/biyagama-news.jpg"
+                  alt="Refreshed look inside Barista Biyagama"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+              <div class="hm-journal__item-copy">
+                <time class="hm-journal__date" datetime="2026-04-17">APR 17 / 2026</time>
+                <h3>Barista Biyagama just got a whole vibe.</h3>
+                <a class="hm-journal__link" href="news.html">Explore -&gt;</a>
+              </div>
+            </article>
+
+            <article class="hm-journal__item hm-journal__item--text-led">
+              <div class="hm-journal__item-copy">
+                <time class="hm-journal__date" datetime="2026-04-17">APR 17 / 2026</time>
+                <h3>Maharagama Diner opens its doors.</h3>
+                <p>A wider-format address for longer meals, later conversations, and a bigger neighborhood table.</p>
+                <a class="hm-journal__link" href="news.html">Explore -&gt;</a>
+              </div>
+              <div class="hm-journal__item-media hm-unmask" data-reveal>
+                <img
+                  src="assets/img/maharagama-dinner-1.jpg"
+                  alt="Interior of the new Barista Maharagama Diner"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="hm-journal__footer">
+          <a class="hm-journal__all" href="news.html">Read the journal -&gt;</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="hm-invitation" aria-labelledby="home-invitation-title">
+      <img
+        class="hm-invitation__image"
+        src="assets/img/slider-oct-3-1536x1025.jpg"
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+        decoding="async"
+      >
+      <div class="hm-invitation__overlay" aria-hidden="true"></div>
+      <div class="hm-invitation__content">
+        <h2 class="hm-display hm-display--closing" id="home-invitation-title" data-settle>
+          <span class="hm-settle__line"><span>Come find your home.</span></span>
+        </h2>
+        <a class="hm-button hm-button--primary hm-invitation__button" href="find-a-cafe.html">Find a cafe</a>
+        <p class="hm-invitation__meta">OPEN DAILY &middot; EIGHTY-SEVEN PLACES &middot; ONE ISLAND</p>
+      </div>
+    </section>
+  </main>
+
+  <site-footer></site-footer>
+
+  <dialog id="brand-film" class="dialog dialog--video">
+    <div class="dialog__content">
+      <button class="dialog-close" type="button" aria-label="Close video" data-close-dialog>&times;</button>
+      <video controls preload="metadata" poster="assets/img/barista-video-poster-1.jpg">
+        <source src="assets/video/barista-intro-video-1.mp4" type="video/mp4">
+      </video>
+    </div>
+  </dialog>
+
+  <dialog id="moment-lightbox" class="dialog dialog--moment" aria-labelledby="moment-lightbox-line">
+    <div class="dialog__content hm-moment-modal">
+      <button class="dialog-close" type="button" aria-label="Close" data-close-dialog>&times;</button>
+      <figure class="hm-moment-modal__figure">
+        <img class="hm-moment-modal__image" alt="">
+        <figcaption class="hm-moment-modal__caption">
+          <p class="hm-moment-modal__eyebrow" data-moment-modal-eyebrow></p>
+          <p class="hm-moment-modal__line" id="moment-lightbox-line" data-moment-modal-line></p>
+        </figcaption>
+      </figure>
+    </div>
+  </dialog>
+</body>
+</html>

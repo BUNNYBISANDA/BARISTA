@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location Gallery | Barista Sri Lanka</title>
+  <meta
+    name="description"
+    content="A premium visual tour of Barista Sri Lanka locations, showcasing the architecture, interiors, and spatial character of cafes across the island."
+  >
+  <link rel="icon" href="assets/img/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Plus+Jakarta+Sans:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/data/gallery-locations.js" defer></script>
+  <script src="scripts/gallery.js" defer></script>
+</head>
+<body class="page page--gallery">
+  <site-header data-page="gallery"></site-header>
+
+  <main class="gl-page">
+    <section class="gl-hero">
+      <div class="container-wide gl-hero__grid">
+        <div class="gl-hero__copy" data-reveal>
+          <p class="gl-eyebrow">CH. 06 / LOCATION GALLERY</p>
+          <h1 class="gl-title">Across Sri Lanka, Barista takes shape differently.</h1>
+          <p class="gl-lead">A curated visual tour of the spaces that carry the brand.</p>
+          <div class="gl-hero__meta" aria-label="Gallery overview">
+            <span data-gallery-location-total>9 locations</span>
+            <span data-gallery-image-total>25 views</span>
+            <span>Location showcase only</span>
+          </div>
+        </div>
+
+        <div class="gl-hero__media" data-gallery-hero-media></div>
+      </div>
+    </section>
+
+    <section class="gl-jump">
+      <div class="container-wide">
+        <div class="gl-jump__shell" data-reveal>
+          <p class="gl-eyebrow">Quick jump</p>
+          <nav class="gl-jump__rail" aria-label="Jump to Barista locations" data-gallery-jumps></nav>
+        </div>
+      </div>
+    </section>
+
+    <section class="gl-featured">
+      <div class="container-wide">
+        <div class="gl-featured__intro" data-reveal>
+          <p class="gl-eyebrow">Featured locations</p>
+          <h2 class="gl-featured__title">A few addresses announce themselves immediately.</h2>
+        </div>
+        <div class="gl-featured__grid" data-gallery-featured></div>
+      </div>
+    </section>
+
+    <section class="gl-locations">
+      <div class="container-wide gl-locations__stack" data-gallery-locations></div>
+    </section>
+
+    <section class="gl-cta">
+      <div class="container-wide gl-cta__panel" data-reveal>
+        <div class="gl-cta__copy">
+          <p class="gl-eyebrow">Next step</p>
+          <h2 class="gl-title gl-title--small">Find the Barista location closest to you.</h2>
+          <p class="gl-lead gl-lead--compact">The gallery shows the spaces. The locator gets you there.</p>
+        </div>
+        <div class="gl-cta__actions">
+          <a class="gl-button gl-button--primary" href="find-a-cafe.html">Find a cafe</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <site-footer></site-footer>
+
+  <dialog class="gl-lightbox" id="gallery-viewer" aria-labelledby="gallery-viewer-title">
+    <div class="gl-lightbox__content">
+      <button
+        class="gl-lightbox__close"
+        type="button"
+        aria-label="Close location viewer"
+        data-gallery-close
+        data-close-dialog
+      >&times;</button>
+
+      <div class="gl-lightbox__media">
+        <img src="" alt="" data-gallery-viewer-image>
+      </div>
+
+      <div class="gl-lightbox__footer">
+        <div class="gl-lightbox__copy">
+          <p class="gl-lightbox__meta" data-gallery-viewer-meta></p>
+          <h2 class="gl-lightbox__title" id="gallery-viewer-title" data-gallery-viewer-title></h2>
+          <p class="gl-lightbox__caption" data-gallery-viewer-caption></p>
+        </div>
+
+        <div class="gl-lightbox__nav">
+          <button class="gl-lightbox__arrow" type="button" data-gallery-prev>Prev</button>
+          <p class="gl-lightbox__counter" data-gallery-viewer-counter>1 / 1</p>
+          <button class="gl-lightbox__arrow" type="button" data-gallery-next>Next</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>

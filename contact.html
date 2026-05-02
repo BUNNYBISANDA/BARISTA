@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Barista Sri Lanka</title>
+  <meta
+    name="description"
+    content="Contact Barista Sri Lanka for general enquiries, franchising conversations, and corporate office information."
+  >
+  <link rel="icon" href="assets/img/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body class="page page--contact">
+  <site-header data-page="contact"></site-header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero-grid">
+        <div class="stack" data-reveal>
+          <span class="eyebrow">Contact</span>
+          <h1 class="page-title">A cleaner, clearer way to connect with the Barista team.</h1>
+          <p class="lead page-summary">
+            Use this page for guest enquiries, corporate contact, franchising conversations, or wider brand discussions.
+          </p>
+        </div>
+
+        <div class="map-frame" data-reveal>
+          <img src="assets/img/barista-locations-map-2.jpg" alt="Barista locations map">
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container contact-grid">
+        <article class="card" data-reveal>
+          <span class="eyebrow">Send a message</span>
+          <h2 class="section-title">A frontend-ready contact form with a cleaner user experience.</h2>
+          <form class="stack" data-demo-form data-success-message="Thanks. Your message has been captured in this prototype.">
+            <div class="form-grid">
+              <div class="field">
+                <label for="contact-name">Full name</label>
+                <input id="contact-name" name="name" type="text" required>
+              </div>
+              <div class="field">
+                <label for="contact-email">Email address</label>
+                <input id="contact-email" name="email" type="email" required>
+              </div>
+              <div class="field">
+                <label for="contact-topic">Subject</label>
+                <select id="contact-topic" name="topic">
+                  <option>General enquiry</option>
+                  <option>Franchising</option>
+                  <option>Careers</option>
+                  <option>Media / partnership</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="contact-phone">Phone number</label>
+                <input id="contact-phone" name="phone" type="tel">
+              </div>
+              <div class="field field--full">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" name="message" placeholder="How can we help?"></textarea>
+              </div>
+            </div>
+            <div class="button-row">
+              <button class="button button--primary" type="submit">Send enquiry</button>
+              <a class="button button--secondary" href="find-a-cafe.html">Find a Cafe</a>
+            </div>
+            <p class="form-status" hidden data-form-status></p>
+          </form>
+        </article>
+
+        <div class="stack">
+          <article class="info-card hover-rise" data-reveal>
+            <span class="eyebrow">Corporate office</span>
+            <h3>Barista Coffee Lanka Pvt Ltd</h3>
+            <p class="muted">5th Floor, IBM Building, No. 48 Nawam Mawatha, Colombo 02</p>
+          </article>
+
+          <article class="info-card hover-rise" data-reveal>
+            <span class="eyebrow">Email and phone</span>
+            <p><a href="mailto:info@barista.lk">info@barista.lk</a></p>
+            <p><a href="tel:+94112552180">+94 11 255 2180</a></p>
+            <p><a href="tel:+94112552181">+94 11 255 2181</a></p>
+            <p><a href="tel:+94112552182">+94 11 255 2182</a></p>
+          </article>
+
+          <article class="info-card hover-rise" data-reveal>
+            <span class="eyebrow">Follow the brand</span>
+            <p><a href="https://web.facebook.com/BaristaSL" target="_blank" rel="noreferrer">Facebook</a></p>
+            <p><a href="https://www.instagram.com/baristasl" target="_blank" rel="noreferrer">Instagram</a></p>
+            <p><a href="https://www.tiktok.com/@barista.srilanka" target="_blank" rel="noreferrer">TikTok</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <site-footer></site-footer>
+</body>
+</html>
