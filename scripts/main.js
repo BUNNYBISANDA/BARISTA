@@ -735,6 +735,203 @@ function setupHomeMomentLightbox() {
   });
 }
 
+function setupFranchisingSettleReveal(prefersReducedMotion) {
+  const settleNodes = document.querySelectorAll(".page--franchising [data-settle]");
+  if (!settleNodes.length) {
+    return;
+  }
+
+  settleNodes.forEach((node) => {
+    node.querySelectorAll(".fr-settle-line > span").forEach((line, index) => {
+      line.style.transitionDelay = `${index * 60}ms`;
+    });
+  });
+
+  if (prefersReducedMotion) {
+    settleNodes.forEach((node) => node.classList.add("is-visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.25, rootMargin: "0px 0px -40px 0px" }
+  );
+
+  settleNodes.forEach((node) => observer.observe(node));
+}
+
+function setupFranchisingCounters(prefersReducedMotion) {
+  const counters = Array.from(document.querySelectorAll(".page--franchising [data-counter]"));
+  if (!counters.length) {
+    return;
+  }
+
+  const renderValue = (node, value) => {
+    const decimals = Number(node.dataset.counterDecimals || 0);
+    const suffix = node.dataset.counterSuffix || "";
+    const formatter = new Intl.NumberFormat("en-US", {
+      minimumFractionDigits: decimals,
+      maximumFractionDigits: decimals
+    });
+    const renderedValue = decimals > 0 ? value : Math.round(value);
+    node.textContent = `${formatter.format(renderedValue)}${suffix}`;
+  };
+
+  const animateCounter = (node) => {
+    const target = Number(node.dataset.counter || 0);
+    const decimals = Number(node.dataset.counterDecimals || 0);
+    const startTime = performance.now();
+    const duration = 1600;
+    const easeOutQuart = (value) => 1 - (1 - value) ** 4;
+
+    const frame = (now) => {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const currentValue = target * easeOutQuart(progress);
+      const renderedValue = decimals > 0 ? Number(currentValue.toFixed(decimals)) : currentValue;
+
+      renderValue(node, renderedValue);
+
+      if (progress < 1) {
+        window.requestAnimationFrame(frame);
+        return;
+      }
+
+      node.dataset.counterCounted = "true";
+      renderValue(node, target);
+    };
+
+    window.requestAnimationFrame(frame);
+  };
+
+  if (prefersReducedMotion) {
+    counters.forEach((node) => {
+      renderValue(node, Number(node.dataset.counter || 0));
+      node.dataset.counterCounted = "true";
+    });
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting || entry.target.dataset.counterCounted === "true") {
+          return;
+        }
+
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.35, rootMargin: "0px 0px -40px 0px" }
+  );
+
+  counters.forEach((node) => observer.observe(node));
+}
+
+function setupFranchisingVoiceLightbox() {
+  const dialog = document.getElementById("fr-voice-lightbox");
+  const triggers = Array.from(document.querySelectorAll(".page--franchising [data-voice-open]"));
+  const track = document.querySelector("[data-fr-voices-track]");
+  if (!dialog || !triggers.length) {
+    return;
+  }
+
+  const portraitShell = dialog.querySelector("[data-voice-modal-initials]");
+  const portrait = dialog.querySelector(".fr-voice-modal__portrait");
+  const name = dialog.querySelector("[data-voice-modal-name]");
+  const quote = dialog.querySelector("[data-voice-modal-quote]");
+  let previousBodyOverflow = "";
+
+  const setTrackPaused = (paused) => {
+    if (!track) {
+      return;
+    }
+
+    if (paused) {
+      track.dataset.frVoicesPaused = "true";
+      return;
+    }
+
+    delete track.dataset.frVoicesPaused;
+  };
+
+  const resetPortraitFallback = () => {
+    if (!portraitShell || !portrait) {
+      return;
+    }
+
+    portraitShell.classList.remove("is-fallback");
+    portrait.style.display = "";
+  };
+
+  if (portraitShell && portrait) {
+    portrait.addEventListener("error", () => {
+      portraitShell.classList.add("is-fallback");
+      portrait.style.display = "none";
+    });
+  }
+
+  const populateDialog = (trigger) => {
+    if (!name || !quote || !portraitShell || !portrait) {
+      return;
+    }
+
+    const initials = trigger.dataset.voiceInitials || "";
+    portraitShell.dataset.initials = initials;
+    resetPortraitFallback();
+    portrait.src = trigger.dataset.voicePortrait || "";
+    portrait.alt = `Portrait of ${trigger.dataset.voiceName || "Barista franchisee"}`;
+    name.textContent = trigger.dataset.voiceName || "";
+    quote.textContent = trigger.dataset.voiceQuote || "";
+  };
+
+  triggers.forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      populateDialog(trigger);
+      previousBodyOverflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      setTrackPaused(true);
+
+      if (!dialog.open) {
+        dialog.showModal();
+      }
+    });
+  });
+
+  dialog.addEventListener("close", () => {
+    document.body.style.overflow = previousBodyOverflow;
+    setTrackPaused(false);
+
+    if (portrait) {
+      portrait.removeAttribute("src");
+      portrait.alt = "";
+      portrait.style.display = "";
+    }
+
+    if (portraitShell) {
+      portraitShell.classList.remove("is-fallback");
+      portraitShell.dataset.initials = "";
+    }
+
+    if (name) {
+      name.textContent = "";
+    }
+
+    if (quote) {
+      quote.textContent = "";
+    }
+  });
+}
+
 function setupHomeManifesto() {
   if (!document.body.classList.contains("page--home")) {
     return;
@@ -752,7 +949,20 @@ function setupHomeManifesto() {
   setupHomeCardTilt(prefersReducedMotion);
 }
 
+function setupFranchisingPage() {
+  if (!document.body.classList.contains("page--franchising")) {
+    return;
+  }
+
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  setupFranchisingSettleReveal(prefersReducedMotion);
+  setupFranchisingCounters(prefersReducedMotion);
+  setupFranchisingVoiceLightbox();
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   setupLocationQueryPrefill();
   setupHomeManifesto();
+  setupFranchisingPage();
 });
